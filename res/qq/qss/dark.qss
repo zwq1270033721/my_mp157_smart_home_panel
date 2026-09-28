@@ -1,0 +1,378 @@
+/* ============================================================
+ * QQ 风格 Qt 样式表（深色主题 · 拟物立体）
+ * 图片路径相对本 qss 目录，素材见 ../widgets/dark/
+ * ============================================================ */
+
+/* ---------- 全局 ---------- */
+QWidget {
+    background-color: #1F242B;
+    color: #E7EBF0;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 13px;
+}
+
+/* ---------- 普通按钮 ---------- */
+QPushButton {
+    border-image: url(../widgets/dark/common/btn_normal.png) 9 9 9 9;
+    padding: 4px 16px;
+    min-height: 24px;
+}
+QPushButton:hover {
+    border-image: url(../widgets/dark/common/btn_hover.png) 9 9 9 9;
+}
+QPushButton:pressed {
+    border-image: url(../widgets/dark/common/btn_pressed.png) 9 9 9 9;
+    padding-top: 5px;   /* 按下位移 1px，模拟立体感 */
+}
+QPushButton:disabled {
+    border-image: url(../widgets/dark/common/btn_disabled.png) 9 9 9 9;
+    color: #9AA5B1;
+}
+
+/* ---------- 主按钮（登录/发送，objectName="primaryBtn"） ---------- */
+QPushButton#primaryBtn {
+    border-image: url(../widgets/dark/common/btn_primary_normal.png) 9 9 9 9;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+QPushButton#primaryBtn:hover {
+    border-image: url(../widgets/dark/common/btn_primary_hover.png) 9 9 9 9;
+}
+QPushButton#primaryBtn:pressed {
+    border-image: url(../widgets/dark/common/btn_primary_pressed.png) 9 9 9 9;
+    padding-top: 5px;
+}
+
+/* ---------- 输入框 ---------- */
+QLineEdit {
+    border-image: url(../widgets/dark/login/input.png) 6 6 6 6;
+    padding: 4px 8px;
+    min-height: 22px;
+    selection-background-color: #12B7F5;
+}
+QLineEdit:focus {
+    border-image: url(../widgets/dark/login/input_focus.png) 6 6 6 6;
+}
+
+/* ---------- 勾选框 / 单选 ---------- */
+QCheckBox::indicator, QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(../widgets/dark/common/checkbox_unchecked.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(../widgets/dark/common/checkbox_unchecked_hover.png);
+}
+QCheckBox::indicator:checked {
+    image: url(../widgets/dark/common/checkbox_checked.png);
+}
+QCheckBox::indicator:checked:hover {
+    image: url(../widgets/dark/common/checkbox_checked_hover.png);
+}
+QCheckBox::indicator:disabled {
+    image: url(../widgets/dark/common/checkbox_disabled.png);
+}
+QRadioButton::indicator:unchecked {
+    image: url(../widgets/dark/common/radio_unchecked.png);
+}
+QRadioButton::indicator:unchecked:hover {
+    image: url(../widgets/dark/common/radio_unchecked_hover.png);
+}
+QRadioButton::indicator:checked {
+    image: url(../widgets/dark/common/radio_checked.png);
+}
+QRadioButton::indicator:checked:hover {
+    image: url(../widgets/dark/common/radio_checked_hover.png);
+}
+QRadioButton::indicator:disabled {
+    image: url(../widgets/dark/common/radio_disabled.png);
+}
+
+/* ---------- 开关 ---------- */
+QAbstractButton#switchBtn {   /* 用 QToolButton/QPushButton + objectName 模拟开关 */
+    border: none;
+    background: transparent;
+    min-width: 52px;
+    min-height: 28px;
+}
+QAbstractButton#switchBtn:checked {
+    border-image: url(../widgets/dark/common/switch_on.png) 0 0 0 0;
+}
+QAbstractButton#switchBtn:unchecked {
+    border-image: url(../widgets/dark/common/switch_off.png) 0 0 0 0;
+}
+
+/* ---------- 进度条 ---------- */
+QProgressBar {
+    border-image: url(../widgets/dark/common/progress_groove.png) 8 8 8 8;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 16px;
+}
+QProgressBar::chunk {
+    border-image: url(../widgets/dark/common/progress_chunk.png) 8 8 8 8;
+}
+
+/* ---------- 滑块 ---------- */
+QSlider::groove:horizontal {
+    height: 8px;
+    border-image: url(../widgets/dark/common/slider_groove.png) 2 2 2 2;
+}
+QSlider::handle:horizontal {
+    width: 22px;
+    height: 22px;
+    margin: -7px 0;
+    image: url(../widgets/dark/common/slider_handle.png);
+}
+QSlider::handle:horizontal:pressed {
+    image: url(../widgets/dark/common/slider_handle_pressed.png);
+}
+
+/* ---------- 下拉框 ---------- */
+QComboBox {
+    border-image: url(../widgets/dark/login/input.png) 6 6 6 6;
+    padding: 4px 24px 4px 8px;
+    min-height: 22px;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+QComboBox::down-arrow {
+    image: url(../widgets/dark/common/combo_arrow.png);
+}
+
+/* ---------- 微调框 ---------- */
+QSpinBox {
+    border-image: url(../widgets/dark/login/input.png) 6 6 6 6;
+    min-height: 22px;
+    padding-right: 20px;
+}
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 18px;
+    height: 12px;
+    border: none;
+    image: url(../widgets/dark/common/spin_up.png);
+}
+QSpinBox::up-button:hover { image: url(../widgets/dark/common/spin_up_hover.png); }
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 18px;
+    height: 12px;
+    border: none;
+    image: url(../widgets/dark/common/spin_down.png);
+}
+QSpinBox::down-button:hover { image: url(../widgets/dark/common/spin_down_hover.png); }
+
+/* ---------- 滚动条 ---------- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 12px;
+    margin: 12px 0;
+}
+QScrollBar::handle:vertical {
+    border-image: url(../widgets/dark/scrollbar/v_thumb.png) 4 4 4 4;
+    min-height: 28px;
+}
+QScrollBar::add-line:vertical {
+    height: 12px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    image: url(../widgets/dark/scrollbar/v_down.png);
+}
+QScrollBar::sub-line:vertical {
+    height: 12px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+    image: url(../widgets/dark/scrollbar/v_up.png);
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+QScrollBar:horizontal {
+    background: transparent;
+    height: 12px;
+    margin: 0 12px;
+}
+QScrollBar::handle:horizontal {
+    border-image: url(../widgets/dark/scrollbar/h_thumb.png) 4 4 4 4;
+    min-width: 28px;
+}
+QScrollBar::add-line:horizontal {
+    width: 12px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+    image: url(../widgets/dark/scrollbar/h_right.png);
+}
+QScrollBar::sub-line:horizontal {
+    width: 12px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+    image: url(../widgets/dark/scrollbar/h_left.png);
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+
+/* ---------- 菜单 / 提示 ---------- */
+QMenu {
+    border-image: url(../widgets/dark/common/menu_bg.png) 10 10 10 10;
+    padding: 6px;
+}
+QMenu::item {
+    padding: 6px 24px;
+    border-radius: 4px;
+}
+QMenu::item:selected {
+    background-color: rgba(59,155,234,0.25);
+}
+QToolTip {
+    border-image: url(../widgets/dark/common/tooltip.png) 6 6 6 6;
+    color: #FFFFFF;
+    padding: 4px 8px;
+}
+
+/* ---------- 标签页 ---------- */
+QTabBar::tab {
+    border-image: url(../widgets/dark/common/tab_normal.png) 8 8 8 8;
+    min-width: 64px;
+    padding: 5px 12px;
+}
+QTabBar::tab:selected {
+    border-image: url(../widgets/dark/common/tab_active.png) 8 8 8 8;
+    color: #7CC4F8;
+}
+
+/* ---------- 列表 ---------- */
+QListWidget {
+    border: none;
+    background: transparent;
+}
+QListWidget::item {
+    border-radius: 8px;
+    padding: 6px;
+    border: 1px solid transparent;
+}
+QListWidget::item:hover {
+    background-color: rgba(59,155,234,0.25);
+    border-image: url(../widgets/dark/chat/list_item_hover.png) 8 8 8 8;
+}
+QListWidget::item:selected {
+    background-color: rgba(59,155,234,0.25);
+}
+
+/* ============================================================
+ * 聊天气泡用法（QLabel）
+ *   普通气泡(推荐): setPixmap 方式，或用固定尺寸：
+ *     QLabel#bubblePeer { border-image: url(../widgets/dark/bubbles/peer.png) 12 12 12 12; }
+ *   9 宫格拉伸(文本任意长度):
+ *     QLabel#bubblePeer { border-image: url(../widgets/dark/bubbles/peer_9.png) 12 12 32 24;
+ *                         padding: 10px 14px 18px 14px; }   // 左下角带小尾巴
+ *     QLabel#bubbleSelf { border-image: url(../widgets/dark/bubbles/self_9.png) 12 24 32 12;
+ *                         padding: 10px 14px 18px 14px; }   // 右下角带小尾巴
+ * ============================================================ */
+QLabel#bubblePeer {
+    border-image: url(../widgets/dark/bubbles/peer_9.png) 12 12 32 24;
+    padding: 10px 14px 22px 14px;
+}
+QLabel#bubblePeer:hover {
+    border-image: url(../widgets/dark/bubbles/peer_hover.png) 12 12 12 12;
+}
+QLabel#bubbleSelf {
+    border-image: url(../widgets/dark/bubbles/self_9.png) 12 24 32 12;
+    padding: 10px 14px 22px 14px;
+}
+QLabel#bubbleSelf:hover {
+    border-image: url(../widgets/dark/bubbles/self_hover.png) 12 12 12 12;
+}
+
+/* ---------- 圆形头像（QSS 无法真圆裁剪，用 QPainterPath 遮罩） ----------
+ *  QPixmap pm(":/ui/avatars/avatar_blue.png");
+ *  QBitmap mask(pm.size()); mask.fill(Qt::color0);
+ *  QPainter mp(&mask); mp.setRenderHint(QPainter::Antialiasing);
+ *  mp.setBrush(Qt::color1); mp.drawEllipse(pm.rect()); mp.end();
+ *  pm.setMask(mask);  label->setPixmap(pm);
+ * 可选叠加边框: 再绘制 ../widgets/dark/avatars/frame.png
+ * ------------------------------------------------------------ */
+
+/* ---------- 红色未读角标（QLabel + 数字） ---------- */
+QLabel#badge {
+    border-image: url(../widgets/dark/badge/badge.png) 0 0 0 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 24px;
+    min-height: 24px;
+    qproperty-alignment: AlignCenter;
+}
+
+/* ---------- 标题栏 ---------- */
+QFrame#titleBar {
+    border-image: url(../widgets/dark/titlebar/bg.png) 0 0 0 0;
+    min-height: 30px;
+}
+QToolButton#btnMin { image: url(../widgets/dark/titlebar/btn_min.png); }
+QToolButton#btnMin:hover { image: url(../widgets/dark/titlebar/btn_min_hover.png); }
+QToolButton#btnMax { image: url(../widgets/dark/titlebar/btn_max.png); }
+QToolButton#btnMax:hover { image: url(../widgets/dark/titlebar/btn_max_hover.png); }
+QToolButton#btnClose { image: url(../widgets/dark/titlebar/btn_close.png); }
+QToolButton#btnClose:hover { image: url(../widgets/dark/titlebar/btn_close_hover.png); }
+
+/* ---------- 聊天输入区工具栏 ---------- */
+QToolButton#chatEmoji  { image: url(../widgets/dark/chat/btn_emoji.png); }
+QToolButton#chatEmoji:hover  { image: url(../widgets/dark/chat/btn_emoji_hover.png); }
+QToolButton#chatImage  { image: url(../widgets/dark/chat/btn_image.png); }
+QToolButton#chatImage:hover  { image: url(../widgets/dark/chat/btn_image_hover.png); }
+QToolButton#chatFile   { image: url(../widgets/dark/chat/btn_file.png); }
+QToolButton#chatFile:hover   { image: url(../widgets/dark/chat/btn_file_hover.png); }
+QToolButton#chatMic    { image: url(../widgets/dark/chat/btn_mic.png); }
+QToolButton#chatMic:hover    { image: url(../widgets/dark/chat/btn_mic_hover.png); }
+QToolButton#chatVideo  { image: url(../widgets/dark/chat/btn_video.png); }
+QToolButton#chatVideo:hover  { image: url(../widgets/dark/chat/btn_video_hover.png); }
+QToolButton#chatShake  { image: url(../widgets/dark/chat/btn_shake.png); }
+QToolButton#chatShake:hover  { image: url(../widgets/dark/chat/btn_shake_hover.png); }
+QToolButton#chatMore   { image: url(../widgets/dark/chat/btn_more.png); }
+QToolButton#chatMore:hover   { image: url(../widgets/dark/chat/btn_more_hover.png); }
+
+/* ---------- 发送按钮 ---------- */
+QPushButton#btnSend {
+    border-image: url(../widgets/dark/chat/btn_send_normal.png) 8 8 8 8;
+    color: #FFFFFF;
+    font-weight: bold;
+    min-width: 88px;
+}
+QPushButton#btnSend:hover {
+    border-image: url(../widgets/dark/chat/btn_send_hover.png) 8 8 8 8;
+}
+QPushButton#btnSend:pressed {
+    border-image: url(../widgets/dark/chat/btn_send_pressed.png) 8 8 8 8;
+    padding-top: 3px;
+}
+
+/* ---------- 登录界面 ---------- */
+QFrame#loginWin {
+    border-image: url(../widgets/dark/login/bg.png) 0 0 0 0;
+}
+QPushButton#btnLogin {
+    border-image: url(../widgets/dark/login/btn_login_normal.png) 12 12 12 12;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 44px;
+}
+QPushButton#btnLogin:hover {
+    border-image: url(../widgets/dark/login/btn_login_hover.png) 12 12 12 12;
+}
+QPushButton#btnLogin:pressed {
+    border-image: url(../widgets/dark/login/btn_login_pressed.png) 12 12 12 12;
+    padding-top: 3px;
+}
+QToolButton#btnMore {
+    image: url(../widgets/dark/login/btn_more.png);
+}

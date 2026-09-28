@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <rect x="0" y="0" width="240" height="60" fill="white"/>
+  <rect x="14" y="14" width="32" height="32" rx="4" fill="#2ecc71"/>
+  <text x="30" y="36" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">群</text>
+  <text x="52" y="26" font-family="Microsoft YaHei" font-size="12" fill="#333">技术交流群</text>
+  <text x="52" y="44" font-family="Microsoft YaHei" font-size="10" fill="#999">张三: 大家好</text>
+  <text x="220" y="22" font-family="Arial" font-size="10" fill="#bbb" text-anchor="end">昨天</text>
+</svg>

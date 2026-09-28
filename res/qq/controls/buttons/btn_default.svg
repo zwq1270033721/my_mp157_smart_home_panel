@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 36" width="90" height="36">
+  <rect x="1" y="1" width="88" height="34" rx="4" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  <text x="45" y="23" font-family="Microsoft YaHei" font-size="13" fill="#666" text-anchor="middle">默认</text>
+</svg>

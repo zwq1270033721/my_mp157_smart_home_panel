@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <rect x="0" y="0" width="240" height="60" fill="white"/>
+  <circle cx="28" cy="30" r="16" fill="#3498db"/>
+  <circle cx="28" cy="25" r="4" fill="white" opacity="0.9"/>
+  <path d="M 16 42 Q 28 32 40 42 Z" fill="white" opacity="0.9"/>
+  <text x="52" y="26" font-family="Microsoft YaHei" font-size="12" fill="#333">小明</text>
+  <text x="52" y="44" font-family="Microsoft YaHei" font-size="10" fill="#999">今天天气真好~</text>
+  <text x="220" y="22" font-family="Arial" font-size="10" fill="#bbb" text-anchor="end">10:30</text>
+  <circle cx="220" cy="40" r="7" fill="#e74c3c"/>
+  <text x="220" y="43" font-family="Arial" font-size="9" fill="white" text-anchor="middle">3</text>
+</svg>

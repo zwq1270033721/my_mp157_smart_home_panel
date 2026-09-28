@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5db7ff"/>
+      <stop offset="1" stop-color="#1565c0"/>
+    </linearGradient>
+  </defs>
+  <!-- 天空蓝圆角底，复古游戏感 -->
+  <rect width="16" height="16" rx="3.5" fill="url(#sky)"/>
+  <!-- 红帽子 -->
+  <path fill="#e53935" d="M4 0h4v1h-4zM3 1h7v1h-7zM2 2h9v1h-9zM2 3h9v1h-9z"/>
+  <!-- 脸（肤色） -->
+  <path fill="#ffcc99" d="M3 4h7v1h-7zM3 5h1v1h-1zM5 5h2v1h-2zM8 5h2v1h-2zM3 6h2v1h-2z"/>
+  <!-- 眼睛 + 头发/胡子（深棕） -->
+  <path fill="#5d4037" d="M4 5h1v1h-1zM8 5h1v1h-1zM5 6h5v1h-5zM4 7h5v1h-4z"/>
+  <!-- 红色上衣 -->
+  <path fill="#e53935" d="M3 8h2v1h-2zM8 8h2v1h-2zM2 9h3v2h-3zM8 9h3v2h-3zM4 11h1v1h-1zM8 11h1v1h-1z"/>
+  <!-- 蓝色背带裤 -->
+  <path fill="#1e88e5" d="M5 8h3v5h-3zM4 13h2v2h-2zM7 13h2v2h-2z"/>
+  <!-- 背带裤上的黄色纽扣 -->
+  <path fill="#fdd835" d="M5 9h1v1h-1zM7 9h1v1h-1z"/>
+  <!-- 白手套 -->
+  <path fill="#ffffff" d="M2 11h2v1h-2zM9 11h2v1h-2z"/>
+  <!-- 棕色鞋子 -->
+  <path fill="#795548" d="M3 15h3v1h-3zM7 15h3v1h-3z"/>
+</svg>

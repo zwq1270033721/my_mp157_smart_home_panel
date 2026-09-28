@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3aafdb"/><stop offset="1" stop-color="#0e97cb"/></linearGradient>
+    <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,0.3)"/><stop offset="0.5" stop-color="rgba(255,255,255,0.06)"/><stop offset="0.55" stop-color="rgba(255,255,255,0)"/></linearGradient>
+    <linearGradient id="sc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2594F"/><stop offset="1" stop-color="#D63B32"/></linearGradient>
+    <filter id="ds" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(0,0,0,0.35)"/></filter>
+    <filter id="gs" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="rgba(0,0,0,0.35)"/></filter>
+  </defs>
+  <g filter="url(#ds)">
+    <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#tg)"/>
+    <rect x="7" y="7" width="114" height="114" rx="29" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+    <rect x="6" y="6" width="116" height="62" rx="29" fill="url(#gl)"/>
+    
+  <g filter="url(#gs)">
+    <!-- 翅膀（先画，被身体压住一部分） -->
+    <ellipse cx="43" cy="84" rx="6" ry="17" fill="#232A31" transform="rotate(22 43 84)"/>
+    <ellipse cx="85" cy="84" rx="6" ry="17" fill="#232A31" transform="rotate(-22 85 84)"/>
+
+    <!-- 身体 + 头（同色，重叠成一个整体轮廓） -->
+    <ellipse cx="64" cy="83" rx="23" ry="25" fill="#232A31"/>
+    <ellipse cx="64" cy="51" rx="21.5" ry="21" fill="#232A31"/>
+
+    <!-- 白肚 -->
+    <ellipse cx="64" cy="87" rx="14.5" ry="18" fill="#FFFFFF"/>
+
+    <!-- 两个白眼圈（中间交叠，形成经典"护目镜"形状） -->
+    <ellipse cx="54" cy="48" rx="11" ry="12" fill="#FFFFFF"/>
+    <ellipse cx="74" cy="48" rx="11" ry="12" fill="#FFFFFF"/>
+
+    <!-- 眼珠 + 高光 -->
+    <circle cx="54" cy="48" r="6.5" fill="#232A31"/>
+    <circle cx="74" cy="48" r="6.5" fill="#232A31"/>
+    <circle cx="56" cy="45.5" r="2.5" fill="#FFFFFF"/>
+    <circle cx="76" cy="45.5" r="2.5" fill="#FFFFFF"/>
+
+    <!-- 橙喙：圆角三角形，尖朝下 -->
+    <path d="M57.5 54 L70.5 54 L64 65 Z" fill="#FFA51F"
+          stroke="#FFA51F" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- 红围脖（横过脖子，比该处身体略宽，读起来才像"绕了一圈"） -->
+    <rect x="44" y="69.5" width="40" height="9" rx="4.5" fill="url(#sc)"/>
+
+    <!-- 脚蹼 -->
+    <ellipse cx="53" cy="106" rx="9" ry="4.8" fill="#FFA51F"/>
+    <ellipse cx="75" cy="106" rx="9" ry="4.8" fill="#FFA51F"/>
+  </g>
+  </g></svg>

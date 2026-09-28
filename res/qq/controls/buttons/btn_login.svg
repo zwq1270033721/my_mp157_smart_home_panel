@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" width="200" height="44">
+  <defs><linearGradient id="bl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1aa3ff"/><stop offset="1" stop-color="#0080e0"/></linearGradient></defs>
+  <rect x="1" y="1" width="198" height="42" rx="6" fill="url(#bl)" stroke="#0070c8" stroke-width="1"/>
+  <text x="100" y="28" font-family="Microsoft YaHei" font-size="16" fill="white" text-anchor="middle" font-weight="bold">登录</text>
+</svg>

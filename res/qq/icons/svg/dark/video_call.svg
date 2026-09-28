@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#64a6dc"/><stop offset="1" stop-color="#3f8dcc"/></linearGradient>
+    <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,0.34)"/><stop offset="0.5" stop-color="rgba(255,255,255,0.06)"/><stop offset="0.55" stop-color="rgba(255,255,255,0)"/></linearGradient>
+    <filter id="ds" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(0,0,0,0.35)"/></filter>
+    <filter id="gs" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="rgba(0,0,0,0.35)"/></filter>
+  </defs>
+  <g filter="url(#ds)">
+    <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#tg)"/>
+    <rect x="7" y="7" width="114" height="114" rx="29" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+    <rect x="6" y="6" width="116" height="62" rx="29" fill="url(#gl)"/>
+    <g filter="url(#gs)"><rect x="28" y="42" width="60" height="44" rx="10" fill="#FFFFFF"/><polygon points="50,51 50,77 66,64" fill="#4293d4"/><circle cx="80" cy="38" r="11" fill="#FFFFFF"/><line x1="80" y1="32" x2="80" y2="44" stroke="#4293d4" stroke-width="4" stroke-linecap="round"/><line x1="74" y1="38" x2="86" y2="38" stroke="#4293d4" stroke-width="4" stroke-linecap="round"/></g>
+  </g></svg>

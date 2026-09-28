@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 36" width="90" height="36">
+  <defs><linearGradient id="bok" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1aa3ff"/><stop offset="1" stop-color="#0080e0"/></linearGradient></defs>
+  <rect x="1" y="1" width="88" height="34" rx="4" fill="url(#bok)" stroke="#0070c8" stroke-width="1"/>
+  <text x="45" y="23" font-family="Microsoft YaHei" font-size="13" fill="white" text-anchor="middle">确定</text>
+</svg>

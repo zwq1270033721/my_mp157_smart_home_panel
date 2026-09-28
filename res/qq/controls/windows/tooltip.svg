@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" width="100" height="30">
+  <rect x="1" y="1" width="98" height="24" rx="4" fill="#333"/>
+  <path d="M 40 25 L 50 32 L 60 25" fill="#333"/>
+  <text x="50" y="17" font-family="Microsoft YaHei" font-size="11" fill="white" text-anchor="middle">提示文字</text>
+</svg>

@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShieldDialog</class>
+ <widget class="QDialog" name="ShieldDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>625</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>625</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>安防监控</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#ShieldDialog{background-color:#0d1117;}
+QToolTip{background-color:#1a2332;color:#e6edf3;border:1px solid #3b82f6;}</string>
+  </property>
+  <widget class="QLabel" name="labelBg">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>625</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#0d1117;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QFrame" name="header">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#header{background-color:#131a24;border:none;border-bottom:1px solid #22303f;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QLabel" name="lblHeaderIcon">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>12</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/icons/res/icons/app/security.svg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTitle">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>6</y>
+      <width>340</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:17pt;font-weight:bold;color:#e6edf3;</string>
+    </property>
+    <property name="text">
+     <string>安防监控中心</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblSubTitle">
+    <property name="geometry">
+     <rect>
+      <x>72</x>
+      <y>38</y>
+      <width>340</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:8pt;color:#5b6b7f;letter-spacing:2px;</string>
+    </property>
+    <property name="text">
+     <string>SECURITY  MONITOR  CENTER</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblClock">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>18</y>
+      <width>440</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12pt;color:#8fa3b8;</string>
+    </property>
+    <property name="text">
+     <string>----/--/--  --:--:--</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBack">
+    <property name="geometry">
+     <rect>
+      <x>958</x>
+      <y>12</y>
+      <width>48</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>48</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>48</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:transparent;color:#8fa3b8;border:none;border-radius:8px;font-size:16pt;}
+QPushButton:hover{background-color:#1f2937;color:#ffffff;}
+QPushButton:pressed{background-color:#dc2626;color:#ffffff;}</string>
+    </property>
+    <property name="text">
+     <string>✕</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="panelLeft">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>76</y>
+     <width>254</width>
+     <height>537</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#panelLeft{background-color:#131a24;border:1px solid #22303f;border-radius:16px;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QLabel" name="lblArmModeT">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>14</y>
+      <width>218</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12pt;font-weight:bold;color:#e6edf3;</string>
+    </property>
+    <property name="text">
+     <string>布防模式</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbAway">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>50</y>
+      <width>218</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton{color:#cbd5e1;font-size:13pt;padding-left:14px;background-color:#1a2332;border:1px solid #2b3a4d;border-radius:10px;}
+QRadioButton:hover{border:1px solid #3b82f6;}
+QRadioButton:checked{color:#ffffff;font-weight:bold;background-color:#16304d;border:1px solid #3b82f6;}
+QRadioButton::indicator{width:18px;height:18px;border-radius:9px;border:2px solid #4b5b6e;background-color:transparent;}
+QRadioButton::indicator:checked{border:2px solid #3b82f6;background-color:#3b82f6;}</string>
+    </property>
+    <property name="text">
+     <string>离家布防</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbHome">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>94</y>
+      <width>218</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton{color:#cbd5e1;font-size:13pt;padding-left:14px;background-color:#1a2332;border:1px solid #2b3a4d;border-radius:10px;}
+QRadioButton:hover{border:1px solid #3b82f6;}
+QRadioButton:checked{color:#ffffff;font-weight:bold;background-color:#16304d;border:1px solid #3b82f6;}
+QRadioButton::indicator{width:18px;height:18px;border-radius:9px;border:2px solid #4b5b6e;background-color:transparent;}
+QRadioButton::indicator:checked{border:2px solid #3b82f6;background-color:#3b82f6;}</string>
+    </property>
+    <property name="text">
+     <string>在家布防</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbDisarm">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>138</y>
+      <width>218</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton{color:#cbd5e1;font-size:13pt;padding-left:14px;background-color:#1a2332;border:1px solid #2b3a4d;border-radius:10px;}
+QRadioButton:hover{border:1px solid #3b82f6;}
+QRadioButton:checked{color:#ffffff;font-weight:bold;background-color:#16304d;border:1px solid #3b82f6;}
+QRadioButton::indicator{width:18px;height:18px;border-radius:9px;border:2px solid #4b5b6e;background-color:transparent;}
+QRadioButton::indicator:checked{border:2px solid #3b82f6;background-color:#3b82f6;}</string>
+    </property>
+    <property name="text">
+     <string>撤      防</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="line1">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>192</y>
+      <width>218</width>
+      <height>1</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#22303f;border:none;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblStatusT">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>202</y>
+      <width>218</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12pt;font-weight:bold;color:#e6edf3;</string>
+    </property>
+    <property name="text">
+     <string>当前状态</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblArmStatus">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>228</y>
+      <width>218</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:20pt;font-weight:bold;color:#22c55e;</string>
+    </property>
+    <property name="text">
+     <string>已布防</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblArmDetail">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>284</y>
+      <width>218</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:9pt;color:#7c8ba1;</string>
+    </property>
+    <property name="text">
+     <string>已布防 00:00:00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="line2">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>316</y>
+      <width>218</width>
+      <height>1</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#22303f;border:none;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblQuickT">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>326</y>
+      <width>218</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12pt;font-weight:bold;color:#e6edf3;</string>
+    </property>
+    <property name="text">
+     <string>快捷操作</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSimulate">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>360</y>
+      <width>218</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#1a2332;color:#f59e0b;border:1px solid #a16207;border-radius:10px;font-size:13pt;}
+QPushButton:hover{background-color:#241f12;}
+QPushButton:pressed{background-color:#3a2e10;}</string>
+    </property>
+    <property name="text">
+     <string>模拟入侵检测</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSos">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>412</y>
+      <width>218</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#dc2626;color:#ffffff;border:none;border-radius:12px;font-size:16pt;font-weight:bold;}
+QPushButton:hover{background-color:#ef4444;}
+QPushButton:pressed{background-color:#991b1b;}</string>
+    </property>
+    <property name="text">
+     <string>紧 急 报 警</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDisarmAll">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>478</y>
+      <width>218</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#1a2332;color:#8fa3b8;border:1px solid #2b3a4d;border-radius:10px;font-size:13pt;}
+QPushButton:hover{border:1px solid #3b82f6;color:#ffffff;}
+QPushButton:pressed{background-color:#292f3a;}</string>
+    </property>
+    <property name="text">
+     <string>一键撤防</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="panelVideo">
+   <property name="geometry">
+    <rect>
+     <x>282</x>
+     <y>76</y>
+     <width>726</width>
+     <height>262</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#panelVideo{background-color:#131a24;border:1px solid #22303f;border-radius:16px;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="VideoWidget" name="videoView" native="true">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>702</width>
+      <height>182</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>702</width>
+      <height>182</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>702</width>
+      <height>182</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblLive">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>26</y>
+      <width>110</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,140);color:#ef4444;border-radius:13px;padding-left:12px;font-size:11pt;font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>● REC</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblVideoTime">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>26</y>
+      <width>110</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,140);color:#cbd5e1;border-radius:13px;font-size:10pt;</string>
+    </property>
+    <property name="text">
+     <string>--:--:--</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblChannel">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>154</y>
+      <width>300</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,140);color:#e6edf3;border-radius:14px;padding-left:14px;font-size:11pt;</string>
+    </property>
+    <property name="text">
+     <string>CAM-01 · 前门</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAlarm">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>702</width>
+      <height>182</height>
+     </rect>
+    </property>
+    <property name="visible">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(220,38,38,90);border:3px solid #ef4444;border-radius:8px;color:#ffffff;font-size:24pt;font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>⚠  入 侵 报 警</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCh1">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>206</y>
+      <width>168</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#1a2332;color:#8fa3b8;border:1px solid #2b3a4d;border-radius:10px;font-size:13pt;}
+QPushButton:hover{border:1px solid #3b82f6;}
+QPushButton:checked{background-color:#16304d;color:#ffffff;border:1px solid #3b82f6;font-weight:bold;}
+QPushButton:disabled{background-color:#101720;color:#3a4759;border:1px dashed #2b3a4d;font-weight:normal;}</string>
+    </property>
+    <property name="text">
+     <string>前  门</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCh2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>206</y>
+      <width>168</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#1a2332;color:#8fa3b8;border:1px solid #2b3a4d;border-radius:10px;font-size:13pt;}
+QPushButton:hover{border:1px solid #3b82f6;}
+QPushButton:checked{background-color:#16304d;color:#ffffff;border:1px solid #3b82f6;font-weight:bold;}
+QPushButton:disabled{background-color:#101720;color:#3a4759;border:1px dashed #2b3a4d;font-weight:normal;}</string>
+    </property>
+    <property name="text">
+     <string>后  院</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCh3">
+    <property name="geometry">
+     <rect>
+      <x>368</x>
+      <y>206</y>
+      <width>168</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#1a2332;color:#8fa3b8;border:1px solid #2b3a4d;border-radius:10px;font-size:13pt;}
+QPushButton:hover{border:1px solid #3b82f6;}
+QPushButton:checked{background-color:#16304d;color:#ffffff;border:1px solid #3b82f6;font-weight:bold;}
+QPushButton:disabled{background-color:#101720;color:#3a4759;border:1px dashed #2b3a4d;font-weight:normal;}</string>
+    </property>
+    <property name="text">
+     <string>车  库</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCh4">
+    <property name="geometry">
+     <rect>
+      <x>546</x>
+      <y>206</y>
+      <width>168</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#1a2332;color:#8fa3b8;border:1px solid #2b3a4d;border-radius:10px;font-size:13pt;}
+QPushButton:hover{border:1px solid #3b82f6;}
+QPushButton:checked{background-color:#16304d;color:#ffffff;border:1px solid #3b82f6;font-weight:bold;}
+QPushButton:disabled{background-color:#101720;color:#3a4759;border:1px dashed #2b3a4d;font-weight:normal;}</string>
+    </property>
+    <property name="text">
+     <string>客  厅</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="panelSensor">
+   <property name="geometry">
+    <rect>
+     <x>282</x>
+     <y>350</y>
+     <width>726</width>
+     <height>92</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#panelSensor{background-color:#131a24;border:1px solid #22303f;border-radius:16px;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QFrame" name="cardSensor1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>169</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#cardSensor1{background-color:#1a2332;border:1px solid #2b3a4d;border-radius:12px;}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="dotSensor1">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>17</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#22c55e;border-radius:5px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameSensor1">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>10</y>
+       <width>128</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:10pt;color:#cbd5e1;</string>
+     </property>
+     <property name="text">
+      <string>门磁 · 前门</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stateSensor1">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>40</y>
+       <width>146</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12pt;font-weight:bold;color:#22c55e;</string>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="cardSensor2">
+    <property name="geometry">
+     <rect>
+      <x>189</x>
+      <y>10</y>
+      <width>169</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#cardSensor2{background-color:#1a2332;border:1px solid #2b3a4d;border-radius:12px;}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="dotSensor2">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>17</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#22c55e;border-radius:5px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameSensor2">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>10</y>
+       <width>128</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:10pt;color:#cbd5e1;</string>
+     </property>
+     <property name="text">
+      <string>红外 · 客厅</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stateSensor2">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>40</y>
+       <width>146</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12pt;font-weight:bold;color:#22c55e;</string>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="cardSensor3">
+    <property name="geometry">
+     <rect>
+      <x>368</x>
+      <y>10</y>
+      <width>169</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#cardSensor3{background-color:#1a2332;border:1px solid #2b3a4d;border-radius:12px;}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="dotSensor3">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>17</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#22c55e;border-radius:5px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameSensor3">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>10</y>
+       <width>128</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:10pt;color:#cbd5e1;</string>
+     </property>
+     <property name="text">
+      <string>烟雾 · 厨房</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stateSensor3">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>40</y>
+       <width>146</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12pt;font-weight:bold;color:#22c55e;</string>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="cardSensor4">
+    <property name="geometry">
+     <rect>
+      <x>547</x>
+      <y>10</y>
+      <width>169</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#cardSensor4{background-color:#1a2332;border:1px solid #2b3a4d;border-radius:12px;}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <widget class="QLabel" name="dotSensor4">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>17</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#22c55e;border-radius:5px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="nameSensor4">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>10</y>
+       <width>128</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:10pt;color:#cbd5e1;</string>
+     </property>
+     <property name="text">
+      <string>水浸 · 卫生间</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="stateSensor4">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>40</y>
+       <width>146</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size:12pt;font-weight:bold;color:#22c55e;</string>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="panelLog">
+   <property name="geometry">
+    <rect>
+     <x>282</x>
+     <y>454</y>
+     <width>480</width>
+     <height>159</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#panelLog{background-color:#131a24;border:1px solid #22303f;border-radius:16px;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QLabel" name="lblLogT">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>10</y>
+      <width>200</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12pt;font-weight:bold;color:#e6edf3;</string>
+    </property>
+    <property name="text">
+     <string>报警记录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClearLog">
+    <property name="geometry">
+     <rect>
+      <x>396</x>
+      <y>10</y>
+      <width>68</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:transparent;color:#7c8ba1;border:1px solid #2b3a4d;border-radius:8px;font-size:10pt;}
+QPushButton:hover{color:#ffffff;border:1px solid #3b82f6;}
+QPushButton:pressed{background-color:#1a2332;}</string>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableLog">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>44</y>
+      <width>456</width>
+      <height>103</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget{background-color:transparent;border:none;gridline-color:#1e2836;font-size:10pt;}
+QTableWidget::item{padding-left:8px;border-bottom:1px solid #1e2836;}
+QTableWidget::item:selected{background-color:#1e3a5f;}
+QHeaderView::section{background-color:#182030;color:#7c8ba1;border:none;padding:5px;font-size:10pt;}
+QTableCornerButton::section{background-color:#182030;border:none;}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="columnCount">
+     <number>4</number>
+    </property>
+    <column>
+     <property name="text">
+      <string>时间</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>位置</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>事件</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>状态</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="panelDevice">
+   <property name="geometry">
+    <rect>
+     <x>774</x>
+     <y>454</y>
+     <width>234</width>
+     <height>159</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#panelDevice{background-color:#131a24;border:1px solid #22303f;border-radius:16px;}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QLabel" name="lblDevT">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>10</y>
+      <width>200</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12pt;font-weight:bold;color:#e6edf3;</string>
+    </property>
+    <property name="text">
+     <string>系统状态</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev1Name">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>42</y>
+      <width>100</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#7c8ba1;</string>
+    </property>
+    <property name="text">
+     <string>摄像头</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev1Val">
+    <property name="geometry">
+     <rect>
+      <x>116</x>
+      <y>42</y>
+      <width>102</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#22c55e;</string>
+    </property>
+    <property name="text">
+     <string>4 / 4 在线</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev2Name">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>72</y>
+      <width>100</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#7c8ba1;</string>
+    </property>
+    <property name="text">
+     <string>门磁</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev2Val">
+    <property name="geometry">
+     <rect>
+      <x>116</x>
+      <y>72</y>
+      <width>102</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#22c55e;</string>
+    </property>
+    <property name="text">
+     <string>8 / 8 在线</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev3Name">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>102</y>
+      <width>100</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#7c8ba1;</string>
+    </property>
+    <property name="text">
+     <string>探测器</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev3Val">
+    <property name="geometry">
+     <rect>
+      <x>116</x>
+      <y>102</y>
+      <width>102</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#22c55e;</string>
+    </property>
+    <property name="text">
+     <string>6 / 6 在线</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev4Name">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>132</y>
+      <width>100</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#7c8ba1;</string>
+    </property>
+    <property name="text">
+     <string>警    号</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDev4Val">
+    <property name="geometry">
+     <rect>
+      <x>116</x>
+      <y>132</y>
+      <width>102</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:10pt;color:#22c55e;</string>
+    </property>
+    <property name="text">
+     <string>正常</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VideoWidget</class>
+   <extends>QWidget</extends>
+   <header>videowidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
