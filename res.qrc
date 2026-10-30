@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="/images">
-        <file>1b5e1e34f64572377b350d9271537d3d.jpeg</file>
-        <file>7a502912283b24972c24079b3c0bbbd4.jpeg</file>
-        <file>195534fdcf37d6cdabbf9263959b94e4.jpg</file>
+        <file alias="1b5e1e34f64572377b350d9271537d3d.jpeg">res/images/1b5e1e34f64572377b350d9271537d3d.jpeg</file>
+        <file alias="7a502912283b24972c24079b3c0bbbd4.jpeg">res/images/7a502912283b24972c24079b3c0bbbd4.jpeg</file>
+        <file alias="195534fdcf37d6cdabbf9263959b94e4.jpg">res/images/195534fdcf37d6cdabbf9263959b94e4.jpg</file>
+        <file alias="de0d41a27fa0c3bd5ef1e2219975cca5.jpg">res/images/de0d41a27fa0c3bd5ef1e2219975cca5.jpg</file>
     </qresource>
     <qresource prefix="/icons">
         <file>res/icons/light.svg</file>
@@ -59,6 +60,54 @@
         <file>res/icons/app/weather.svg</file>
         <file>res/icons/app/wifi.svg</file>
         <file>res/icons/app/window.svg</file>
+        <file>res/icons/smart/top/top_air.svg</file>
+        <file>res/icons/smart/top/top_air_gray.svg</file>
+        <file>res/icons/smart/top/top_temp.svg</file>
+        <file>res/icons/smart/top/top_temp_gray.svg</file>
+        <file>res/icons/smart/nav/nav_check.svg</file>
+        <file>res/icons/smart/nav/nav_check_gray.svg</file>
+        <file>res/icons/smart/nav/nav_folder.svg</file>
+        <file>res/icons/smart/nav/nav_folder_gray.svg</file>
+        <file>res/icons/smart/nav/nav_grid.svg</file>
+        <file>res/icons/smart/nav/nav_grid_gray.svg</file>
+        <file>res/icons/smart/nav/nav_home.svg</file>
+        <file>res/icons/smart/nav/nav_home_gray.svg</file>
+        <file>res/icons/smart/device/ac.svg</file>
+        <file>res/icons/smart/device/ac_gray.svg</file>
+        <file>res/icons/smart/device/check_ok.svg</file>
+        <file>res/icons/smart/device/check_ok_gray.svg</file>
+        <file>res/icons/smart/device/curtain.svg</file>
+        <file>res/icons/smart/device/curtain_gray.svg</file>
+        <file>res/icons/smart/device/freshair.svg</file>
+        <file>res/icons/smart/device/freshair_gray.svg</file>
+        <file>res/icons/smart/device/light.svg</file>
+        <file>res/icons/smart/device/light_gray.svg</file>
+        <file>res/icons/smart/device/security.svg</file>
+        <file>res/icons/smart/device/security_gray.svg</file>
+        <file>res/icons/smart/scene/leave_home.svg</file>
+        <file>res/icons/smart/scene/leave_home_gray.svg</file>
+        <file>res/icons/smart/scene/movie.svg</file>
+        <file>res/icons/smart/scene/movie_gray.svg</file>
+        <file>res/icons/smart/scene/return_home.svg</file>
+        <file>res/icons/smart/scene/return_home_gray.svg</file>
+        <file>res/icons/smart/scene/sleep.svg</file>
+        <file>res/icons/smart/scene/sleep_gray.svg</file>
+        <file>res/icons/smart/room/room_bedroom.svg</file>
+        <file>res/icons/smart/room/room_bedroom_gray.svg</file>
+        <file>res/icons/smart/room/room_card_home.svg</file>
+        <file>res/icons/smart/room/room_card_home_gray.svg</file>
+        <file>res/icons/smart/room/room_kitchen.svg</file>
+        <file>res/icons/smart/room/room_kitchen_gray.svg</file>
+        <file>res/icons/smart/room/room_living.svg</file>
+        <file>res/icons/smart/room/room_living_gray.svg</file>
+        <file>res/icons/smart/room/room_study.svg</file>
+        <file>res/icons/smart/room/room_study_gray.svg</file>
+        <file>res/icons/weather/bg_weather.svg</file>
+        <file>res/icons/weather/icon_sun_cloud.svg</file>
+        <file>res/icons/music/bg_music.svg</file>
+        <file>res/icons/music/icon_back.svg</file>
+        <file>res/icons/music/icon_next.svg</file>
+        <file>res/icons/music/icon_play.svg</file>
     </qresource>
     <qresource prefix="/qq">
         <file>res/qq/icons/png/dark/128/bell.png</file>
@@ -895,7 +944,7 @@
         <file>res/qq/widgets/light/titlebar/btn_restore.png</file>
     </qresource>
     <qresource prefix="/">
-        <file>7a502912283b24972c24079b3c0bbbd4.jpeg</file>
+        <file alias="7a502912283b24972c24079b3c0bbbd4.jpeg">res/images/7a502912283b24972c24079b3c0bbbd4.jpeg</file>
     </qresource>
     <qresource prefix="/qq/controls">
         <file>res/qq/controls/avatars/avatar_blue.svg</file>

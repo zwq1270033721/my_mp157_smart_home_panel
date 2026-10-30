@@ -2098,7 +2098,6 @@ void game::paintEvent(QPaintEvent *ev)
     for (const Block &b : m_blocks) {
         if (!b.alive || blockIsStill(b)) continue;
         drawBlockShape(p, b);
-        const qreal half = qMax(b.size.width(), b.size.height()) * 0.5 + 6.0;
     }
 
     // 已发射的鸟 + 轨迹
@@ -2139,13 +2138,11 @@ void game::paintEvent(QPaintEvent *ev)
         p.rotate(qRadiansToDegrees(pt.rot));
         p.setPen(Qt::NoPen);
         p.setBrush(c);
-        qreal rad = pt.size * 1.5;
         if (pt.type == 1) {
             p.setBrush(QColor(c.red(), c.green(), c.blue(), c.alpha() / 2));
             p.drawEllipse(QPointF(0, 0), pt.size * (2.0 - t) * 1.7, pt.size * (2.0 - t) * 1.7);
             p.setBrush(c);
             p.drawEllipse(QPointF(0, 0), pt.size * (2.0 - t), pt.size * (2.0 - t));
-            rad = pt.size * (2.0 - t) * 1.8;
         } else if (pt.type == 2) {
             p.drawRect(QRectF(-pt.size * 0.5, -pt.size * 0.28, pt.size, pt.size * 0.56));
         } else if (pt.type == 3) {
@@ -2153,16 +2150,14 @@ void game::paintEvent(QPaintEvent *ev)
         } else if (pt.type == 5) {
             p.setBrush(QColor(c.red(), c.green(), c.blue(), c.alpha() / 3));
             p.drawEllipse(QPointF(0, 0), pt.size, pt.size * 0.82);
-            rad = pt.size;
         } else {
             p.drawRect(QRectF(-pt.size * 0.5, -pt.size * 0.5, pt.size, pt.size));
         }
         p.restore();
     }
 
-    paintAimUi(p);
     // 瞄准辅助线画在弹弓附近, 一并标脏
-    if (m_state == StAim && m_pulling)
+    paintAimUi(p);
 
     p.restore();
 

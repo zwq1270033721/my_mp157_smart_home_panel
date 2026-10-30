@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>470</width>
-    <height>320</height>
+    <width>502</width>
+    <height>330</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>470</width>
-    <height>280</height>
+    <width>502</width>
+    <height>330</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>470</width>
-    <height>320</height>
+    <width>502</width>
+    <height>330</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -28,21 +28,21 @@
   <widget class="QStackedWidget" name="kbStacked">
    <property name="geometry">
     <rect>
-     <x>-10</x>
+     <x>0</x>
      <y>40</y>
-     <width>490</width>
+     <width>502</width>
      <height>290</height>
     </rect>
    </property>
    <property name="minimumSize">
     <size>
-     <width>490</width>
+     <width>502</width>
      <height>290</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>490</width>
+     <width>502</width>
      <height>290</height>
     </size>
    </property>
@@ -1206,19 +1206,19 @@ QPushButton:pressed
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </size>
      </property>
@@ -2404,19 +2404,19 @@ QPushButton:pressed
       <rect>
        <x>0</x>
        <y>-1</y>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </size>
      </property>
@@ -2442,19 +2442,19 @@ border-image: url(:/images/195534fdcf37d6cdabbf9263959b94e4.jpg);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>490</width>
+       <width>502</width>
        <height>290</height>
       </size>
      </property>

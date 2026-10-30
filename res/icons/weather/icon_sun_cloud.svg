@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <defs>
+    <radialGradient id="sun" cx="0.4" cy="0.35" r="1">
+      <stop offset="0" stop-color="#ffdf6e"/>
+      <stop offset="1" stop-color="#f5a41f"/>
+    </radialGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d6eafc"/>
+    </linearGradient>
+  </defs>
+  <g fill="#f49d1d">
+    <path d="M86 18 L94 36 L78 36 Z"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(45 86 74)"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(90 86 74)"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(135 86 74)"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(180 86 74)"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(225 86 74)"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(270 86 74)"/>
+    <path d="M86 18 L94 36 L78 36 Z" transform="rotate(315 86 74)"/>
+  </g>
+  <circle cx="86" cy="74" r="33" fill="url(#sun)"/>
+  <g fill="url(#cloud)">
+    <circle cx="96" cy="106" r="24"/>
+    <circle cx="128" cy="96" r="30"/>
+    <circle cx="154" cy="112" r="22"/>
+    <rect x="88" y="106" width="88" height="28" rx="14"/>
+  </g>
+</svg>

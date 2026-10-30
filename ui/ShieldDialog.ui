@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@ QToolTip{background-color:#1a2332;color:#e6edf3;border:1px solid #3b82f6;}</stri
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>625</height>
+     <height>600</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -164,7 +164,7 @@ QPushButton:pressed{background-color:#dc2626;color:#ffffff;}</string>
      <x>16</x>
      <y>76</y>
      <width>254</width>
-     <height>537</height>
+     <height>524</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -899,9 +899,9 @@ QPushButton:disabled{background-color:#101720;color:#3a4759;border:1px dashed #2
    <property name="geometry">
     <rect>
      <x>282</x>
-     <y>454</y>
+     <y>443</y>
      <width>480</width>
-     <height>159</height>
+     <height>157</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -998,9 +998,9 @@ QTableCornerButton::section{background-color:#182030;border:none;}</string>
    <property name="geometry">
     <rect>
      <x>774</x>
-     <y>454</y>
+     <y>443</y>
      <width>234</width>
-     <height>159</height>
+     <height>157</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1171,7 +1171,7 @@ QTableCornerButton::section{background-color:#182030;border:none;}</string>
   <customwidget>
    <class>VideoWidget</class>
    <extends>QWidget</extends>
-   <header>videowidget.h</header>
+   <header>src/videowidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

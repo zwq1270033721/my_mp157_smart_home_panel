@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -57,7 +57,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/music.svg);
+border-image: url(:/icons/res/icons/app/music.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -85,7 +85,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/light.svg);
+border-image: url(:/icons/res/icons/app/light.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -113,7 +113,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/camera.svg);
+border-image: url(:/icons/res/icons/app/camera.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -141,7 +141,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/bluetooth.svg);
+border-image: url(:/icons/res/icons/app/bluetooth.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -169,7 +169,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/wifi.svg);
+border-image: url(:/icons/res/icons/app/wifi.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -197,7 +197,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/lock.svg);
+border-image: url(:/icons/res/icons/app/lock.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -225,7 +225,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/sun.svg);
+border-image: url(:/icons/res/icons/app/sun.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -253,7 +253,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/water.svg);
+border-image: url(:/icons/res/icons/app/water.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -281,7 +281,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/weather.svg);
+border-image: url(:/icons/res/icons/app/weather.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -309,7 +309,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/moon.svg);
+border-image: url(:/icons/res/icons/app/moon.svg);
 border:none;
 }
 QPushButton:pressed{
@@ -337,7 +337,7 @@ background-color:rgba(0,0,0,70);
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton{
-border-image: url(:/icons/app/shield.svg);
+border-image: url(:/icons/res/icons/app/shield.svg);
 border:none;
 }
 QPushButton:pressed{

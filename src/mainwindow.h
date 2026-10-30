@@ -59,6 +59,10 @@ private slots:
     void on_galagame_clicked();
 
 private:
+    // Camera/Moon/Shield/Weather 在 3 个页面上都有按钮，统一走这个入口
+    enum class DevicePage { Camera, Moon, Shield, Weather };
+    void openDevicePage(DevicePage page);
+
     Ui::MainWindow *ui;
     void slideInBottomFrame();
     // 返回当前页面上那个可滑入的底部面板；该页没有则返回 nullptr

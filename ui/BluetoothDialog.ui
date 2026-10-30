@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1024</width>
-    <height>625</height>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -25,78 +25,653 @@
   <property name="windowTitle">
    <string>蓝牙设置</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="spacing">
-    <number>20</number>
+  <widget class="QCheckBox" name="checkBoxBluetooth">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>0</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
    </property>
-   <property name="leftMargin">
-    <number>40</number>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox{
+    spacing:10px;
+    font-size:16px;
+}
+/* 外框轨道 */
+QCheckBox::indicator{
+    width:50px;
+    height:26px;
+    border-radius:13px;
+    background-color:#cccccc;
+}
+/* 里面圆形滑块 */
+QCheckBox::indicator::handle{
+    width:22px;
+    height:22px;
+    border-radius:11px;
+    background:white;
+}
+/* 选中=蓝牙打开，轨道变蓝色 */
+QCheckBox::indicator:checked{
+    background-color:rgb(53,132,228);
+}
+QCheckBox::indicator:checked::handle{
+    margin-left:24px;  /*滑块往右滑*/
+}</string>
    </property>
-   <property name="topMargin">
-    <number>40</number>
+   <property name="text">
+    <string>蓝牙</string>
    </property>
-   <property name="rightMargin">
-    <number>40</number>
+  </widget>
+  <widget class="QFrame" name="frameDeviceInfo">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>70</y>
+     <width>550</width>
+     <height>500</height>
+    </rect>
    </property>
-   <property name="bottomMargin">
-    <number>40</number>
+   <property name="minimumSize">
+    <size>
+     <width>550</width>
+     <height>500</height>
+    </size>
    </property>
-   <item>
-    <widget class="QLabel" name="labelTitle">
+   <property name="maximumSize">
+    <size>
+     <width>550</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#frameDeviceInfo{
+border:2px solid rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0.8);
+border-radius:30px;
+border-left-color: rgba(222, 221, 218,0.3);
+border-bottom-color: rgba(222, 221, 218,0.3);
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="lblDeviceInfoTitle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;设备信息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblLayer1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>370</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgba(119, 118, 123,0.5);
+border-radius:30px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblLayer2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>130</y>
+      <width>370</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgba(119, 118, 123,0.5);
+border-radius:30px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblLayer3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>370</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgba(119, 118, 123,0.5);
+border-radius:30px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblLayer4">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>110</y>
+      <width>370</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid rgba(119, 118, 123,0.5);
+border-radius:30px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frameDeviceCard">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>370</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>370</width>
+      <height>160</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frameDeviceCard{
+border:2px solid rgba(119, 118, 123,0.5);
+border-radius:30px;
+background-color: qlineargradient(spread:reflect, x1:1, y1:1, x2:0.498, y2:0.511364, stop:0.11399 rgb(252, 245, 228), stop:0.943005 rgba(255, 255, 255, 255));
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>20</y>
+       <width>261</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutDeviceCard">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayoutDeviceInfo">
+        <item>
+         <widget class="QLabel" name="lblDeviceName">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;ATK - MP157bluetooth&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblMacAddress">
+          <property name="text">
+           <string>B0:E1:A2:B5:D2:49</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayoutSignal">
+        <item>
+         <widget class="QLabel" name="lblSignalTitle">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;信号得强度：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblSignalValue">
+          <property name="text">
+           <string>强</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayoutStatus">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblSelectedDeviceTitle">
+       <property name="text">
+        <string>已选择设备：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="lblSelectedDeviceValue">
+       <property name="text">
+        <string>ATK - MP157</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lblStatusTitle">
+       <property name="text">
+        <string>连接状态：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="lblStatusValue">
+       <property name="text">
+        <string>未连接</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>410</y>
+      <width>268</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayoutMac">
+     <item>
+      <widget class="QLabel" name="lblTargetMacTitle">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>目标MAC      :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblTargetMacValue">
+       <property name="minimumSize">
+        <size>
+         <width>160</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>160</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>B0:E1:A2:B5:D2:49</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btnBack">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+QPushButton{
+border-radius:20px;
+font-size:20px;
+color: rgb(51, 209, 122);
+border:2px solid rgba(51, 209, 122,0.1);
+}
+QPushButton::pressed{
+border-radius:20px;
+background-color: rgb(51, 209, 122);
+font-size:20px;
+color: rgb(255, 255, 255);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;返回</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lblTitle">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>10</y>
+     <width>411</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;蓝牙设置&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frameBluetoothCtrl">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>400</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>400</width>
+     <height>500</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame#frameBluetoothCtrl{
+border:2px solid rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0.8);
+border-radius:30px;
+border-left-color: rgba(222, 221, 218,0.3);
+border-bottom-color: rgba(222, 221, 218,0.3);
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="lblCtrlTitle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;操作中心&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frameConnected">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>320</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>320</width>
+      <height>400</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>320</width>
+      <height>400</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#frameConnected{
+border:2px solid rgba(119, 118, 123,0.1);
+border-radius:30px
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QListWidget" name="listWidgetConnected">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>256</width>
+       <height>231</height>
+      </rect>
+     </property>
      <property name="styleSheet">
-      <string notr="true">font-size:28pt; font-weight:bold; color:#2c3e50;</string>
+      <string notr="true">QListWidget::item:selected{
+	background-color: rgb(235, 248, 252);
+	color: rgb(51, 209, 122);
+}
+QListWidget{
+border:none;
+}
+</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>ATK - MP157bluetooth</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>iPhone</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="btnScan">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>280</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton{
+border-radius:15px;
+font-size:20px;
+color: rgb(51, 209, 122);
+border:2px solid rgba(51, 209, 122,0.1);
+}
+QPushButton::pressed{
+border-radius:15px;
+background-color: rgb(53, 132, 228);
+font-size:20px;
+color: rgb(255, 255, 255);
+}
+</string>
      </property>
      <property name="text">
-      <string>蓝牙设置页面</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <string>扫描</string>
      </property>
     </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="labelHint">
-     <property name="styleSheet">
-      <string notr="true">font-size:14pt; color:#7f8c8d;</string>
-     </property>
-     <property name="text">
-      <string>（在此添加蓝牙设置相关控件）</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
-    <widget class="QPushButton" name="btnBack">
-     <property name="minimumSize">
-      <size>
-       <width>120</width>
-       <height>45</height>
-      </size>
+    <widget class="QPushButton" name="btnConnect">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>340</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:#3498db;color:white;border-radius:8px;font-size:16pt;}QPushButton:pressed{background-color:#2980b9;}</string>
+      <string notr="true">QPushButton{
+border-radius:15px;
+font-size:20px;
+color: rgb(51, 209, 122);
+border:2px solid rgba(51, 209, 122,0.1);
+}
+QPushButton::pressed{
+border-radius:15px;
+background-color: rgb(51, 209, 122);
+font-size:20px;
+color: rgb(255, 255, 255);
+}
+</string>
      </property>
      <property name="text">
-      <string>返回</string>
+      <string>连接</string>
      </property>
     </widget>
-   </item>
-  </layout>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="lblBackground">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1024</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1024</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:reflect, x1:1, y1:1, x2:0.498, y2:0.511364, stop:0.11399 rgb(160, 230, 255), stop:0.943005 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>lblBackground</zorder>
+  <zorder>frameDeviceInfo</zorder>
+  <zorder>frameBluetoothCtrl</zorder>
+  <zorder>btnBack</zorder>
+  <zorder>lblTitle</zorder>
+  <zorder>checkBoxBluetooth</zorder>
  </widget>
  <resources/>
  <connections/>

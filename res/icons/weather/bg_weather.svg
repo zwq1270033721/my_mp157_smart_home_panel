@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 600">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff9f0"/>
+      <stop offset="1" stop-color="#fdf1e0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.45" cy="0.42" r="0.65">
+      <stop offset="0" stop-color="#fdeccd" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fdeccd" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="obig" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9b855"/>
+      <stop offset="1" stop-color="#f08c1f"/>
+    </linearGradient>
+    <radialGradient id="osm" cx="0.35" cy="0.3" r="1">
+      <stop offset="0" stop-color="#f8b04c"/>
+      <stop offset="1" stop-color="#ef8c22"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="600" fill="url(#base)"/>
+  <rect width="1024" height="600" fill="url(#glow)"/>
+  <circle cx="945" cy="185" r="235" fill="url(#obig)"/>
+  <circle cx="8" cy="245" r="80" fill="url(#osm)"/>
+  <circle cx="152" cy="108" r="19" fill="#f2932f"/>
+  <circle cx="148" cy="568" r="62" fill="url(#osm)"/>
+</svg>

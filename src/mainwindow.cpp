@@ -30,7 +30,6 @@
 #include <QWidget>
 #include <QtMath>
 
-void slideInBottomFrame();
 // 桌面 Qt6 与板子 Qt5.12.9 的鼠标/触摸 API 不同，这里做一层兼容封装：
 //   Qt6: QMouseEvent::globalPosition()  QTouchEvent::points()
 //   Qt5: QMouseEvent::globalPos()       QTouchEvent::touchPoints()
@@ -162,7 +161,19 @@ bool MainWindow::eventFilter(QObject *watched, QEvent *event)
     return QMainWindow::eventFilter(watched, event);
 }
 
-// ===== 11 个设备按钮点击槽函数：打开对应的设备控制 Dialog =====
+// ===== 设备页入口 =====
+// Camera / Moon / Shield / Weather 在 3 个页面上各有一个按钮，
+// 以前是 12 份重复实现；现在统一转调 openDevicePage()，只保留一份分支。
+
+void MainWindow::openDevicePage(DevicePage page)
+{
+    switch (page) {
+    case DevicePage::Camera:  { CameraDialog  dlg(this); dlg.exec(); break; }
+    case DevicePage::Moon:    { MoonDialog    dlg(this); dlg.exec(); break; }
+    case DevicePage::Shield:  { ShieldDialog  dlg(this); dlg.exec(); break; }
+    case DevicePage::Weather: { WeatherDialog dlg(this); dlg.exec(); break; }
+    }
+}
 
 void MainWindow::on_btnMusic_clicked()
 {
@@ -173,12 +184,6 @@ void MainWindow::on_btnMusic_clicked()
 void MainWindow::on_btnLight_clicked()
 {
     LightDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnCamera_clicked()
-{
-    CameraDialog dlg(this);
     dlg.exec();
 }
 
@@ -212,75 +217,22 @@ void MainWindow::on_btnWater_clicked()
     dlg.exec();
 }
 
-void MainWindow::on_btnWeather_clicked()
-{
-    WeatherDialog dlg(this);
-    dlg.exec();
-}
+// Camera / Moon / Shield / Weather —— 三个页面共 12 个按钮，全部走同一个入口
+void MainWindow::on_btnCamera_clicked()    { openDevicePage(DevicePage::Camera); }
+void MainWindow::on_btnCamera2_clicked()   { openDevicePage(DevicePage::Camera); }
+void MainWindow::on_btnCamera_2_clicked()  { openDevicePage(DevicePage::Camera); }
 
-void MainWindow::on_btnMoon_clicked()
-{
-    MoonDialog dlg(this);
-    dlg.exec();
-}
+void MainWindow::on_btnMoon_clicked()      { openDevicePage(DevicePage::Moon); }
+void MainWindow::on_btnMoon2_clicked()     { openDevicePage(DevicePage::Moon); }
+void MainWindow::on_btnMoon_2_clicked()    { openDevicePage(DevicePage::Moon); }
 
-void MainWindow::on_btnShield_clicked()
-{
-    ShieldDialog dlg(this);
-    dlg.exec();
-}
+void MainWindow::on_btnShield_clicked()    { openDevicePage(DevicePage::Shield); }
+void MainWindow::on_btnShield2_clicked()   { openDevicePage(DevicePage::Shield); }
+void MainWindow::on_btnShield_2_clicked()  { openDevicePage(DevicePage::Shield); }
 
-// ===== page_4 上的按钮（功能与 page_3 相同） =====
-
-void MainWindow::on_btnCamera2_clicked()
-{
-    CameraDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnMoon2_clicked()
-{
-    MoonDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnShield2_clicked()
-{
-    ShieldDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnWeather2_clicked()
-{
-    WeatherDialog dlg(this);
-    dlg.exec();
-}
-
-// ===== page_2 上的按钮（功能相同） =====
-
-void MainWindow::on_btnCamera_2_clicked()
-{
-    CameraDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnMoon_2_clicked()
-{
-    MoonDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnShield_2_clicked()
-{
-    ShieldDialog dlg(this);
-    dlg.exec();
-}
-
-void MainWindow::on_btnWeather_2_clicked()
-{
-    WeatherDialog dlg(this);
-    dlg.exec();
-}
+void MainWindow::on_btnWeather_clicked()   { openDevicePage(DevicePage::Weather); }
+void MainWindow::on_btnWeather2_clicked()  { openDevicePage(DevicePage::Weather); }
+void MainWindow::on_btnWeather_2_clicked() { openDevicePage(DevicePage::Weather); }
 
 // ===== page_3 上的 APP 按钮 =====
 
