@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-STM32MP157-blue">
+  <img src="https://img.shields.io/badge/UI-Qt%20Widgets-green">
+  <img src="https://img.shields.io/badge/Display-linuxfb-orange">
+  <img src="https://img.shields.io/badge/Resolution-1024%C3%97600-lightgrey">
+</p>
+
 # 智能家居中控面板（STM32MP157 / Qt Widgets）
 
 基于 **Qt Widgets** 的触摸屏中控界面，同一份源码同时构建两个目标：
@@ -8,6 +15,19 @@
 | 开发板 | Qt 5.12.9 / ARM (STM32MP157, linuxfb) | 交叉编译后部署上板 |
 
 界面固定 **1024×600**，为裸 framebuffer（linuxfb，无窗口管理器）环境设计。
+
+## 演示
+
+<p align="center">
+  <img border="1px" width="60%" src="docs/demo.gif">
+</p>
+
+<p align="center">
+  <img border="1px" width="45%" src="docs/screenshot-1.png">
+  <img border="1px" width="45%" src="docs/screenshot-2.png">
+</p>
+
+完整演示视频（2 分 32 秒）：[docs/demo.mp4](docs/demo.mp4)
 
 ---
 
@@ -131,7 +151,3 @@ make -j4
 2. **WiFi 扫描为什么要放线程里？** 单次 `iw scan` 最长 25 秒，放 GUI 线程会冻结事件循环；用 `moveToThread` + 队列信号，并用原子标志在关窗时中止子进程。
 3. **串口怎么保证不丢帧？** 接收缓冲区累积 + 按帧边界解析；界面层用末尾续写避免拆行，Hex/时间戳/字节计数统一走一个入口。
 4. **linuxfb 上没有窗口管理器怎么拖动窗口？** 自己处理 `mousePress/Move/Release`，按全局坐标算偏移。
-
-## 10. 演示视频
-
-实机运行演示：[docs/demo.mp4](docs/demo.mp4)
